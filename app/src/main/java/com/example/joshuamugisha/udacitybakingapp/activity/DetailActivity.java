@@ -39,19 +39,6 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail_activity);
 
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
-//        toolbar.setTitle(getTitle());
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
         bakingObjects = new ArrayList<Object>();
 
 
@@ -201,9 +188,6 @@ public class DetailActivity extends AppCompatActivity {
             public StepViewHolder(View view) {
                 super(view);
                 shortDesc = (TextView) view.findViewById(R.id.short_description);
-//                desc = (TextView) view.findViewById(R.id.description);
-//                videoUrl = (TextView) view.findViewById(R.id.video_url);
-
                 view.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View v) {
@@ -239,21 +223,7 @@ public class DetailActivity extends AppCompatActivity {
                 this.shortDesc = shortDesc;
             }
 
-//            public TextView getDesc() {
-//                return this.desc;
-//            }
-//
-//            public void setDesc(TextView desc) {
-//                this.desc = desc;
-//            }
-//
-//            public TextView getVideoUrl() {
-//                return this.videoUrl;
-//            }
-//
-//            public void setVideoUrl(TextView videoUrl) {
-//                this.videoUrl = videoUrl;
-//            }
+
         }
 
         public class IngredientViewHolder extends RecyclerView.ViewHolder {
