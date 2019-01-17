@@ -60,6 +60,10 @@ public class DetailActivity extends AppCompatActivity {
             BakingAppWidget.updateAppWidget(this, appWidgetManager, appWidgetId, recipeName,
                     recipeIngredient);
 
+            for (Ingredient ingredient : recipeIngredient) {
+                System.out.println("---->>>>><<<<>>>>><<>>"+ingredient.getIngredient());
+            }
+
 
             //Toast.makeText(this, recipeStep + " ", Toast.LENGTH_SHORT).show();
             setTitle(recipeName);

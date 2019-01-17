@@ -25,10 +25,15 @@ public class BakingAppWidget extends AppWidgetProvider {
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.baking_app_widget);
 
+
         views.setTextViewText(R.id.appwidget_text, recipeName);
+        views.removeAllViews(R.id.widget_ingredients_container);
 
         for (Ingredient ingredient : ingredientList) {
-            views.setTextViewText(R.id.appwidgetIngredients, ingredient.getIngredient() + "" + ingredient.getMeasure() + "" + ingredient.getQuantity());
+            RemoteViews ingredientView = new RemoteViews(context.getPackageName(),
+                    R.layout.recipe_widget_items);
+            ingredientView.setTextViewText(R.id.ingredient_name_text_view, ingredient.getIngredient());
+            views.addView(R.id.widget_ingredients_container, ingredientView);
         }
 
 
